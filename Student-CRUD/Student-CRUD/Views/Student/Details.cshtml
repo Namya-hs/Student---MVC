@@ -1,0 +1,23 @@
+﻿@model Student_CRUD.Models.Students
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-info text-white">
+            <h3 class="text-center">Student Details</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>First Name:</strong> @Model.FirstName</li>
+                <li class="list-group-item"><strong>Last Name:</strong> @Model.LastName</li>
+                <li class="list-group-item"><strong>Date of Birth:</strong> @Model.DateOfBirth?.ToString("yyyy-MM-dd")</li>
+                <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
+                <li class="list-group-item"><strong>Phone Number:</strong> @Model.PhoneNumber</li>
+                <li class="list-group-item"><strong>Address:</strong> @Model.Address</li>
+            </ul>
+            <div class="text-center mt-3">
+                <a asp-action="Edit" asp-route-id="@Model.StudentID" class="btn btn-warning px-4">Edit</a>
+                <a asp-action="Index" class="btn btn-secondary px-4">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
